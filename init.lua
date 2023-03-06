@@ -141,6 +141,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- Used in LaTeX to collapse math symbols and asteriscs
 vim.o.conceallevel = 2
 
+-- Set number of lines belowcursor
+vim.o.scrolloff = 8
+
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -396,7 +399,7 @@ local servers = {
   clangd = {},
   -- gopls = {},
   pyright = {},
-  -- rust_analyzer = {},
+  rust_analyzer = {},
   -- tsserver = {},
 
   lua_ls = {
