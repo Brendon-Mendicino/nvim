@@ -399,8 +399,26 @@ local servers = {
   clangd = {},
   -- gopls = {},
   pyright = {},
-  rust_analyzer = {},
-  -- tsserver = {},
+  rust_analyzer = {
+    ["rust-analyzer"] = {
+      imports = {
+        granularity = {
+          group = "module",
+        },
+        prefix = "self",
+      },
+      cargo = {
+        autoreload = true,
+        buildScrips = {
+          enable = true,
+        },
+      },
+      procMarco = {
+        enable = true,
+      },
+    },
+  },
+  tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -411,7 +429,7 @@ local servers = {
 
   ltex = {
     ltex = {
-      language = 'en-GB',
+      language = 'auto',
     },
   },
 
